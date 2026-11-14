@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3157d5"><meta name="description" content="Офлайн-список задач с фильтрами">
+  <link rel="manifest" href="manifest.json"><link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css"><title>Мои задачи</title>
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="header"><div><p class="eyebrow">ПЛАН НА ДЕНЬ</p><h1>Мои задачи</h1></div><span id="taskCount" class="count" aria-live="polite">0 задач</span></header>
+    <form id="addForm" class="add-task"><label class="sr-only" for="taskInput">Новая задача</label><input id="taskInput" maxlength="120" placeholder="Что нужно сделать?" autocomplete="off" required><button aria-label="Добавить задачу">+</button></form>
+    <nav class="filters" aria-label="Фильтр задач">
+      <button class="filter-btn active" data-filter="all">Все</button><button class="filter-btn" data-filter="active">Активные</button><button class="filter-btn" data-filter="completed">Готовые</button>
+    </nav>
+    <ul id="taskList" class="task-list"></ul><p id="emptyState" class="empty" hidden>Пока здесь пусто. Добавьте первую задачу.</p>
+    <footer id="status" class="status"><span id="onlineStatus">● Проверяем подключение…</span><button id="clearCompleted" class="clear-btn" type="button">Удалить выполненные</button></footer>
+  </main><script src="js/app.js" defer></script>
+</body></html>
